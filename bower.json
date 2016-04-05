@@ -1,0 +1,13 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "homepage": "",
+  "authors": [
+    "Derkach Vladyslav"
+  ],
+  "description": "",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT"
+}

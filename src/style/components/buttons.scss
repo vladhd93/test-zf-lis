@@ -1,0 +1,106 @@
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.read-btn {
+  padding: 13px 20px;
+  background: repeating-linear-gradient(
+                  75deg,
+                  rgba(#30123b, .4),
+                  rgba(#30123b, .4) 5px,
+                  rgba(#36214e, .4) 5px,
+                  rgba(#36214e, .4) 10px
+  );
+  color: $white;
+  text-transform: uppercase;
+  border: 1px solid $white;
+}
+
+.toggle-panel-btn {
+  position: absolute;
+  cursor: pointer;
+  width: 33px;
+  height: 33px;
+  top: 5px;
+  background: rgba($dark, .8);
+
+  &:before, &:after {
+    content: '';
+    width: 18px;
+    height: 2px;
+    background: $light-grey;
+    display: block;
+    transition: all .3s;
+  }
+
+  &:before {
+    transform: rotate(152deg) translate(3px, -21px);
+  }
+
+  &:after {
+    transform: rotate(220deg) translate(-11px, -1px);
+  }
+
+  @media all and (max-width: 1500px) {
+    display: none;
+  }
+
+  &.active {
+    &:before {
+      transform: rotate(133deg) translate(7px, -15px);
+    }
+
+    &:after {
+      transform: rotate(44deg) translate(14px, 5px);
+    }
+  }
+}
+
+.toggle-menu-btn {
+
+  position: fixed;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  z-index: 3;
+  top: 15px;
+  left: 15px;
+  border-bottom: 2px solid $light-grey;
+  transition: all 1s;
+
+  &:before, &:after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: $light-grey;
+    display: block;
+    transition: all .3s;
+  }
+
+  &:before {
+    transform: translate(0, 0);
+  }
+
+  &:after {
+    transform: translate(0, 10px);
+  }
+
+  &.active {
+    border-bottom: none;
+    left: $sidebar-w;
+
+    &:before {
+      transform: rotate(133deg) translate(8px, -14px);
+    }
+
+    &:after {
+      transform: rotate(44deg) translate(13px, 6px);
+    }
+  }
+
+  @media all and (min-width: 767px) {
+    display: none;
+  }
+
+}
