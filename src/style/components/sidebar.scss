@@ -1,6 +1,7 @@
 .side-nav {
   display: flex;
-  flex: 1 0 $sidebar-w;
+  flex: 0 0 $sidebar-w;
+  flex-basis:$sidebar-w;
   width: $sidebar-w;
   flex-direction: column;
   padding-top: 20px;

@@ -1,26 +1,31 @@
 .panels-wrapper {
   display: flex;
   flex: 0 1 calc(100% - $sidebar-w);
-  width: calc(100% - $sidebar-w);
+  flex-basis:calc(100% - $sidebar-w);
+  width: 100%;
   min-height: 100%;
   position: relative;
   overflow: hidden;
 
   @media all and (max-width: $md) {
     flex-direction: column;
+
   }
 }
 
 .panel {
   display: flex;
-  flex: 1 0 $panel-w;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis:25%;
   background: rgba($dark, .55);
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 0 rem(50px);
   cursor: pointer;
   transition: all .3s;
+  max-width: 100%;
+  box-sizing:border-box;
   margin-right: 1px;
 
   &:last-child {
@@ -32,7 +37,7 @@
 
   @media all and (max-width: $md) {
     padding: rem(50px);
-
+    flex-basis: auto;
   }
 
   &.toggle-panel {
@@ -103,7 +108,7 @@
   margin-bottom: rem(10px);
   opacity: 0;
   height: 0;
-
+  text-align: center;
   transform: translate(0, 50%);
 }
 
@@ -123,12 +128,16 @@
     transition: all 1s;
 
     &.open {
-      flex: 1 0 $panel-w;
+      display: flex;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis:25%;
       transform: translate(0, 0);
       padding: 0 rem(50px);
     }
   }
 }
+
 
 
 

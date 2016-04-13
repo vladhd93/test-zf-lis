@@ -11,7 +11,7 @@ $yellow:#ffcb05;
 $sidebar-w:265px;
 $panels-wrapper-w:unquote("calc( 100% - #{$sidebar-w} )");
 $panel-w:unquote("calc( 25% - #{1px})");
-
+$panels-wrapper-w:unquote("calc( 100% - #{$panel-w})");
 //breakpoints
 
 $lg:1680px;

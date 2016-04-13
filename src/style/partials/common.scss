@@ -26,6 +26,11 @@ body{
   background: linear-gradient(128deg, rgba(111, 200, 237,.9) 0%, rgba(102, 121, 196,.9) 32%, rgba(103, 64, 160,.9) 52%, rgba(144, 48, 94,.8) 92%, rgba(159, 53, 82,.8) 100%);
   background-size:150% 150%;
   animation: Gradient 10s ease infinite;
+  height: 100%;
+
+  @media all and (max-width: $md){
+    height: auto;
+  }
 }
 
 
